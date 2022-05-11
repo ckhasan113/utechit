@@ -1,0 +1,324 @@
+/*=======================
+      Typography
+========================*/
+
+/*
+=====================================
+-------------------------------------
+=====================================
+
+Table Of Content
+
+A. Selector_Tags
+ 
+B. Preloader
+
+C. Scroll_To_Top
+
+D. Overlay_Area
+
+E. Tiny_Slider_Controls
+
+F. Background_Theme 
+
+G. Text_Alignments
+
+H. Common_Width
+
+I. Spacing
+ 
+J. Common_Padding
+
+K. Pagination_Style
+
+
+=====================================
+-------------------------------------
+=====================================
+*/
+
+/* Selector_Tags */
+body {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.7rem;
+  color: #616669;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #15222c;
+}
+h3 {
+  font-family: "Barlow Condensed";
+  font-weight: 600;
+}
+a {
+  color: #000;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+li:hover a {
+  color: #0045ff;
+}
+
+/* Preloader */
+.preloader {
+  background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Scroll_To_Top */
+.scrolltotop {
+  background: #ffffff;
+  border-radius: 50%;
+  bottom: 20px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  color: #0045ff;
+  font-size: 24px;
+  height: 60px;
+  padding-top: 17px;
+  position: fixed;
+  right: 20px;
+  text-align: center;
+  width: 60px;
+  z-index: 99;
+  transition: all 0.7s;
+  opacity: 0;
+}
+.page_bottom {
+  bottom: 70px;
+  transition: all 0.7s;
+}
+.show {
+  opacity: 1;
+  transition: all 0.7s;
+}
+
+/* Overlay_Area */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+/* Tiny_Slider_Controls */
+.go_prev_1,
+.go_next_1 {
+  position: absolute;
+  z-index: 4;
+  color: #fff;
+  top: 50%;
+  background: #dddddd35;
+  padding: 15px 20px;
+  border-radius: 50%;
+  font-size: 30px;
+  transition: all 0.5s;
+}
+.go_prev_1 {
+  transition: all 0.5s;
+  left: 7%;
+}
+.go_next_1 {
+  transition: all 0.5s;
+  right: 7%;
+}
+
+.go_prev_2,
+.go_next_2 {
+  position: absolute;
+  z-index: 2;
+  color: #2334de;
+  top: 35%;
+  background: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.go_prev_2 {
+  left: 85px;
+}
+.go_next_2 {
+  right: 85px;
+}
+
+.go_prev_1:hover,
+.go_next_1:hover,
+.go_prev_2:hover,
+.go_next_2:hover {
+  transition: all 0.5s;
+  background: #2334de;
+  color: #f9f9f9;
+}
+
+/* Background_Theme */
+.theme_bottom_half {
+  position: relative;
+  z-index: 2;
+}
+.theme_bottom_half::after {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: #0d0e0f;
+  z-index: -1;
+}
+.theme_bottom_half_2 {
+  position: relative;
+  z-index: 2;
+}
+.theme_bottom_half_2::after {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #f1f8fb;
+  z-index: -1;
+}
+
+/* Text_Alignments */
+.right {
+  text-align: right;
+}
+
+/* Common_Width */
+.common_max_width {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.common_max_width_2 {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Spacing */
+.space_10 {
+  height: 10px;
+}
+.space_20 {
+  height: 20px;
+}
+.space_30 {
+  height: 30px;
+}
+.space_40 {
+  height: 40px;
+}
+.space_50 {
+  height: 50px;
+}
+.space_60 {
+  height: 60px;
+}
+.space_70 {
+  height: 70px;
+}
+.space_80 {
+  height: 80px;
+}
+.space_90 {
+  height: 90px;
+}
+.space_100 {
+  height: 100px;
+}
+.space_110 {
+  height: 110px;
+}
+.space_120 {
+  height: 120px;
+}
+
+/* Common_Padding */
+.padding_left_right_20 {
+  padding: 0px 20px;
+}
+
+/* Pagination_Style */
+.pagination_wrap {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #e1e6ff;
+  border-bottom: 1px solid #e1e6ff;
+  margin: 80px 0px;
+}
+.pagination {
+  text-align: center;
+  margin: 40px;
+  user-select: none;
+}
+.pagination li {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 16px 32px;
+  margin: 5px;
+  display: block;
+  height: 50px;
+  padding-top: 11px;
+  width: 50px;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(224, 222, 255);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.pagination li.dots,
+.pagination li.dots a {
+  cursor: default;
+}
+.pagination li a {
+  color: rgb(120, 134, 160);
+}
+.pagination li:hover,
+.pagination .active {
+  background: linear-gradient(
+    90deg,
+    rgb(0, 69, 255) 0%,
+    rgb(189, 41, 242) 100%
+  );
+}
+.pagination li:hover a,
+.pagination .active a {
+  color: #ffffff;
+}
+.pagination li.dots:hover {
+  background: rgb(255, 255, 255);
+}
+.pagination li.dots:hover a {
+  color: rgb(120, 134, 160);
+}
+.pagination .disable {
+  display: none;
+}

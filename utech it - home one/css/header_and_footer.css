@@ -1,0 +1,381 @@
+/*=====================
+    Header Area CSS
+======================*/
+
+/*
+=====================================
+-------------------------------------
+=====================================
+
+Table Of Content
+
+1. Top_Header_Area_CSS
+      A. Top_Header_Area
+      B. Social_Area
+2. Bottom_Header_Area_CSS
+      A. Bottom_Header_Area
+      B. Sticky_Header_Area
+      C. Header_Area_Logo
+      D. Menu_Area
+      E. Stellarnav_Area
+      F. Sub_Menu_Area
+      G. Mega_Menu_Area
+3. Footer_Area_CSS
+      A. Footer_Company_Area
+      B. Footer_Area_List
+      C. Footer_Contact_Area
+
+
+=====================================
+-------------------------------------
+=====================================
+*/
+
+/*========================
+    Top_Header_Area_CSS
+==========================*/
+/* Top_Header_Area */
+.top_header_area {
+  background: linear-gradient(120deg, #2334de 0%, #0f165f 100%);
+}
+.top_header_area_wrap {
+  position: relative;
+  z-index: 2;
+  padding: 0px 6% 0px 7%;
+  top: 8px;
+}
+.top_header_area_contact,
+.top_header_area_contact a {
+  color: #fff;
+}
+i.header_contact_icon {
+  font-size: 10px;
+  bottom: 1px;
+  position: relative;
+}
+.single_contact span {
+  font-size: 13px;
+  padding-left: 10px;
+}
+.single_contact a:hover {
+  color: #a496ff;
+}
+
+/* Social_Area */
+.social_area {
+  padding-right: 7%;
+  text-align: right;
+}
+.social_area li {
+  list-style: none;
+  display: inline-block;
+  background: #fff;
+  border-radius: 3px;
+  width: 30px;
+  text-align: center;
+  transition: all 0.5s;
+  margin-left: 5px;
+}
+.social_area li a {
+  color: #0045ff;
+}
+.social_area li:hover {
+  cursor: pointer;
+}
+.social_area li:hover a {
+  color: #fff;
+  transition: all 0.5s;
+}
+.social_area li:hover {
+  background: linear-gradient(90deg, #0045ff 0%, #bd29f2 100%);
+}
+
+/*========================
+  Bottom_Header_Area_CSS
+==========================*/
+/* Bottom_Header_Area */
+.header_area_wrap {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  padding: 5px 0;
+  z-index: 3;
+}
+.header_area_bottom_line {
+  width: 100%;
+  height: 1px;
+  background: #bed0ff;
+  position: absolute;
+  z-index: -1;
+}
+.header_area .container-fluid {
+  padding-left: 120px;
+}
+.header_area {
+  position: relative;
+  z-index: 3;
+}
+
+/* Sticky_Header_Area */
+.header_area_wrap.sticky {
+  position: fixed;
+  z-index: 2;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 99;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.header_area_wrap.sticky .header_area_bottom_line {
+  display: none;
+}
+.header_area_wrap.sticky .stellarnav li a {
+  color: #2393de;
+}
+.header_area_wrap.sticky .stellarnav li a:hover,
+.header_area_wrap.sticky .stellarnav li.current a {
+  color: #6d5cda;
+}
+.header_area_wrap.sticky .stellarnav.dark .menu-toggle span.bars span {
+  background: #000;
+}
+
+/* Header_Area_Logo */
+.header_logo_area {
+  display: flex;
+}
+a.header_logo_area_logo {
+  width: 90%;
+  padding-left: 10%;
+  display: none;
+  transition: all 1s;
+}
+a.header_logo_area_logo.show {
+  display: flex;
+  transition: all 1s;
+}
+
+/* Menu_Area */
+.header_menu_wrap {
+  margin-left: 5%;
+}
+.main_menu {
+  position: unset;
+}
+span.menu_bedge {
+  transform: translateY(-50%);
+  display: inline-block;
+  background: #a62fce;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 7px;
+  border-radius: 3px;
+  margin-left: 7px;
+  letter-spacing: 0.3px;
+}
+
+/* Stellarnav_Area */
+.stellarnav li.has-sub > a:after {
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900;
+  content: "\f107";
+  border: 0;
+  transition: 0.8s;
+  margin-left: 10px;
+}
+.stellarnav li:hover.has-sub > a:after {
+  transform: rotateX(180deg);
+  transition: all 1s;
+}
+.stellarnav li li img {
+  border-radius: 25px;
+  padding: 15px;
+}
+
+/* Sub_Menu_Area */
+.sub_menu {
+  background: #202030;
+}
+a.sub_menu_item {
+  position: relative;
+  width: fit-content;
+  margin-left: 17px;
+}
+a.sub_menu_item::after {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  left: 0%;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  display: block;
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+}
+a.sub_menu_item:hover:after {
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+}
+
+/* Mega_Menu_Area */
+.stellarnav.dark ul ul ul.mega_sub_sub_menu {
+  padding-left: 0px;
+  margin-left: -10px;
+}
+.stellarnav.desktop > ul > li.shop_menu > ul {
+  width: 55%;
+}
+a.mega_sub_menu_item_header {
+  width: fit-content;
+  position: relative;
+}
+a.mega_sub_menu_item_header::before {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background: #4d545c;
+  left: -2px;
+  bottom: 5px;
+}
+ul.mega_sub_sub_menu li {
+  margin-left: 10px;
+}
+ul.mega_sub_sub_menu a {
+  position: relative;
+  width: fit-content;
+}
+ul.mega_sub_sub_menu a::before {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  left: 0%;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  display: block;
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+}
+ul.mega_sub_sub_menu a:hover::before {
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+}
+.stellarnav li li a.mega_sub_menu_item_title {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+.mega_sub_menu li:hover {
+  cursor: pointer;
+}
+
+/*========================
+      Footer_Area_CSS
+==========================*/
+.footer_area {
+  background: #0d0e0f;
+  color: #e0e0e0;
+}
+.footer_area_wrap {
+  padding-top: 100px;
+}
+.footer_column {
+  margin-bottom: 20px;
+}
+
+/* Footer_Company_Area */
+.footer_about_company_area_wrap {
+  margin-right: 30px;
+}
+.footer_area .social_area {
+  padding-right: 0%;
+  text-align: start;
+}
+.footer_title {
+  margin-bottom: 20px;
+}
+.footer_title h3 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+}
+.footer_text {
+  margin-bottom: 20px;
+  line-height: 2rem;
+}
+
+/* Footer_Area_List */
+.footer_list_area_wrap {
+  display: flex;
+  justify-content: center;
+}
+.footer_area ul {
+  padding-left: 0px;
+}
+.footer_list ul a {
+  color: #e0e0e0;
+  line-height: 2rem;
+}
+.footer_list li:hover a {
+  color: #bd29f2;
+}
+
+/* Footer_Contact_Area */
+.footer_area .common_max_width {
+  max-width: 1160px;
+}
+.footer_contact_area_wrap {
+  display: flex;
+  justify-content: end;
+}
+.footer_text .single_contact {
+  display: flex;
+}
+.footer_text .single_contact p,
+.footer_text .single_contact i {
+  font-size: 18px;
+}
+.footer_text .single_contact p {
+  padding-left: 20px;
+}
+.footer_text .single_contact i {
+  color: #0045ff;
+}
+
+/* Bottom_Footer_Area */
+.bottom_footer_area {
+  text-align: center;
+  padding: 30px;
+}

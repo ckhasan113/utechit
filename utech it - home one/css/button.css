@@ -1,0 +1,225 @@
+/*====================
+      Button
+======================*/
+
+/*
+=====================================
+-------------------------------------
+=====================================
+
+Table Of Content
+
+1. Common_CBTN
+2. CBTN_1
+3. CBTN_2
+4. Header_Area_Button
+5. Welcome_Slider_Area_Button
+6. Button_Text_Animation
+7. Button_Text_Animation_Delay
+8. Button_Text_Animation_Effect
+
+
+=====================================
+-------------------------------------
+=====================================
+*/
+
+/* Common_CBTN */
+a.cbtn {
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  height: 50px;
+  width: auto;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 1;
+  margin-left: 0px;
+  padding: 16px;
+  transition: all 0.5s ease 0s;
+  position: relative;
+  z-index: 2;
+}
+
+/* CBTN_1 */
+a.cbtn.cbtn1 {
+  background: linear-gradient(90deg, #0045ff 0%, #bd29f2 100%);
+  color: #ffffff;
+}
+a.cbtn.cbtn1:hover {
+  color: #2334de;
+}
+a.cbtn.cbtn1::after {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 104%;
+  border-radius: 2px;
+  top: -4%;
+  left: -2%;
+  background: #fff;
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+a.cbtn.cbtn1:hover::after {
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* CBTN_2 */
+a.cbtn.cbtn2 {
+  background: #fff;
+  color: #0045ff;
+}
+a.cbtn.cbtn2:hover {
+  color: #fff;
+}
+a.cbtn.cbtn2::after {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 104%;
+  border-radius: 2px;
+  top: -4%;
+  left: -2%;
+  background: linear-gradient(90deg, #0045ff 0%, #bd29f2 100%);
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+a.cbtn.cbtn2:hover::after {
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* Header_Area_Button */
+a.cbtn.cbtn1.header_btn_action,
+a.cbtn.cbtn2.header_btn_action {
+  padding: 18px 40px 15px;
+  border-radius: 3px;
+  text-transform: capitalize;
+}
+
+/* Welcome_Slider_Area_Button */
+a.cbtn.cbtn2.slider_contact_btn_action {
+  margin-left: 20px;
+}
+
+/* Button_Text_Animation */
+.animate span {
+  display: inline-block;
+}
+
+/* Button_Text_Animation_Delay */
+.animate span:nth-of-type(2) {
+  animation-delay: 0.05s;
+}
+.animate span:nth-of-type(3) {
+  animation-delay: 0.1s;
+}
+.animate span:nth-of-type(4) {
+  animation-delay: 0.15s;
+}
+.animate span:nth-of-type(5) {
+  animation-delay: 0.2s;
+}
+.animate span:nth-of-type(6) {
+  animation-delay: 0.25s;
+}
+.animate span:nth-of-type(7) {
+  animation-delay: 0.3s;
+}
+.animate span:nth-of-type(8) {
+  animation-delay: 0.35s;
+}
+.animate span:nth-of-type(9) {
+  animation-delay: 0.4s;
+}
+.animate span:nth-of-type(10) {
+  animation-delay: 0.45s;
+}
+.animate span:nth-of-type(11) {
+  animation-delay: 0.5s;
+}
+.animate span:nth-of-type(12) {
+  animation-delay: 0.55s;
+}
+.animate span:nth-of-type(13) {
+  animation-delay: 0.6s;
+}
+.animate span:nth-of-type(14) {
+  animation-delay: 0.65s;
+}
+.animate span:nth-of-type(15) {
+  animation-delay: 0.7s;
+}
+.animate span:nth-of-type(16) {
+  animation-delay: 0.75s;
+}
+.animate span:nth-of-type(17) {
+  animation-delay: 0.8s;
+}
+.animate span:nth-of-type(18) {
+  animation-delay: 0.85s;
+}
+.animate span:nth-of-type(19) {
+  animation-delay: 0.9s;
+}
+.animate span:nth-of-type(20) {
+  animation-delay: 0.95s;
+}
+
+/* Button_Text_Animation_Effect*/
+.animation_effect span {
+  opacity: 0;
+  transform: translate(-150px, 0) scale(0.3);
+  animation: leftRight 0.5s forwards;
+}
+
+@keyframes leftRight {
+  40% {
+    transform: translate(50px, 0) scale(0.7);
+    opacity: 1;
+  }
+
+  60% {
+    color: #0f40ba;
+  }
+
+  80% {
+    transform: translate(0) scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
